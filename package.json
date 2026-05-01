@@ -1,0 +1,92 @@
+{
+  "name": "@stellar-oss/sepstack",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Stellar Ecosystem Proposal (SEP) compliance",
+  "license": "Apache-2.0",
+  "author": "stellar-oss",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./sep1": {
+      "import": "./dist/sep1/index.js",
+      "require": "./dist/sep1/index.cjs",
+      "types": "./dist/sep1/index.d.ts"
+    },
+    "./sep6": {
+      "import": "./dist/sep6/index.js",
+      "require": "./dist/sep6/index.cjs",
+      "types": "./dist/sep6/index.d.ts"
+    },
+    "./sep9": {
+      "import": "./dist/sep9/index.js",
+      "require": "./dist/sep9/index.cjs",
+      "types": "./dist/sep9/index.d.ts"
+    },
+    "./sep10": {
+      "import": "./dist/sep10/index.js",
+      "require": "./dist/sep10/index.cjs",
+      "types": "./dist/sep10/index.d.ts"
+    },
+    "./sep12": {
+      "import": "./dist/sep12/index.js",
+      "require": "./dist/sep12/index.cjs",
+      "types": "./dist/sep12/index.d.ts"
+    },
+    "./sep24": {
+      "import": "./dist/sep24/index.js",
+      "require": "./dist/sep24/index.cjs",
+      "types": "./dist/sep24/index.d.ts"
+    },
+    "./sep31": {
+      "import": "./dist/sep31/index.js",
+      "require": "./dist/sep31/index.cjs",
+      "types": "./dist/sep31/index.d.ts"
+    },
+    "./sep38": {
+      "import": "./dist/sep38/index.js",
+      "require": "./dist/sep38/index.cjs",
+      "types": "./dist/sep38/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src tests",
+    "typecheck": "tsc --noEmit",
+    "docs": "typedoc",
+    "size": "size-limit"
+  },
+  "peerDependencies": {
+    "@stellar/stellar-sdk": ">=12.0.0"
+  },
+  "dependencies": {
+    "@iarna/toml": "2.2.5",
+    "jose": "5.9.6",
+    "ky": "1.7.2"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "11.1.6",
+    "@stellar/stellar-sdk": "12.3.0",
+    "@types/node": "20.17.10",
+    "@vitest/coverage-v8": "2.1.9",
+    "msw": "2.7.0",
+    "tsup": "8.3.5",
+    "typedoc": "0.27.6",
+    "typescript": "5.7.3",
+    "vitest": "2.1.9"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
